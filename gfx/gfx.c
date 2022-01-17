@@ -10,8 +10,8 @@ uint32_t* disp_buffer;
  
 void GFX_init() {
     draw_buffer = sceGeEdramGetAddr();
-    disp_buffer = (uint32_t*)sceGeEdramGetAddr() + (272 * 512 * 4);
- 
+    disp_buffer = (uint32_t*)sceGeEdramGetAddr() + (272 * 512);
+    
     sceDisplaySetMode(0, 480, 272);
     sceDisplaySetFrameBuf(disp_buffer, 512, PSP_DISPLAY_PIXEL_FORMAT_8888, 1);
 }
